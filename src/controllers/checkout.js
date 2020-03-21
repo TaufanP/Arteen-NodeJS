@@ -3,9 +3,12 @@ const miscHelper = require('../helpers/helpers')
 
 module.exports = {
     insertCheckout: (req, res)=>{
-        const id_order = req.body.id_order;
-
-        checkoutModel.insertCheckout(id_order)
+        const {invoice, total} = req.body;
+        const data = {
+            invoice,
+            total
+        }
+        checkoutModel.insertCheckout(invoice, data)
         .then((result)=>{
             miscHelper.response(res, result, 201);
         })
