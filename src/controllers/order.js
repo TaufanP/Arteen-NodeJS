@@ -22,6 +22,15 @@ module.exports = {
       })
       .catch(err => console.log(err));
   },
+  orderInvoice: (req, res) => {
+    const invoice = req.params.invoice;
+    orderModel
+      .orderInvoice(invoice)
+      .then(result => {
+        miscHelper.response(res, result, 200);
+      })
+      .catch(err => console.log(err));
+  },
   insertOrder: (req, res) => {
     const { id_product, quantity, total_price, invoice } = req.body;
     const data = {

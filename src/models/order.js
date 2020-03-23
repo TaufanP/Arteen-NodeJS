@@ -34,6 +34,24 @@ module.exports = {
       );
     });
   },
+  orderInvoice: invoice => {
+    return new Promise((resolve, reject) => {
+      connection.query(
+        `SELECT o.*, p.name
+        FROM orderdata o 
+        INNER JOIN product_name p
+        ON o.id_product = p.id
+        WHERE invoice = ${invoice}`,
+        (err, result) => {
+          if (!err) {
+            resolve(result);
+          } else {
+            reject(new Error(err));
+          }
+        }
+      );
+    });
+  },
 
   insertOrder: data => {
     return new Promise((resolve, reject) => {

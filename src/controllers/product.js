@@ -6,7 +6,6 @@ module.exports = {
         productModel.getProduct()
         .then((result)=>{
             miscHelper.response(res, result, 200);
-            console.log('add bisa')
         })
         
         .catch(err=>console.log(err));
@@ -40,7 +39,7 @@ module.exports = {
             description,
             price,
             stock,
-            image: `http://localhost:8080/uploads/${req.file.filename}`,
+            image: `http://54.159.200.168:8081/uploads/${req.file.filename}`,
             id_category
         }
 
@@ -65,7 +64,7 @@ module.exports = {
             description,
             price,
             stock,
-            image: `http://localhost:8080/uploads/${req.file.filename}`,
+            image: `http://54.159.200.168:8081/uploads/${req.file.filename}`,
             id_category
         }
 

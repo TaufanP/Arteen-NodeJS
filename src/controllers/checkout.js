@@ -20,5 +20,13 @@ module.exports = {
             miscHelper.response(res, result, 200);
         })
         .catch(err=>console.log(err));
+    },
+    readCheckoutDetail: (req, res)=>{
+        const invoice = req.params.invoice
+        checkoutModel.readCheckoutDetail(invoice)
+        .then((result)=>{
+            miscHelper.response(res, result, 200);
+        })
+        .catch(err=>console.log(err));
     }
 }

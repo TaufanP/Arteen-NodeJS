@@ -31,7 +31,6 @@ module.exports = {
                     if(err){throw err}
                     else{
                         data.password = hash;
-                        console.log(hash)
                         userModel.insertUser(data)
                         .then((result) => {
                             miscHelper.response(res, result, 201)

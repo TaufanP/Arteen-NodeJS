@@ -23,5 +23,16 @@ module.exports = {
         }
       });
     });
+  },
+  readCheckoutDetail: (invoice) => {
+    return new Promise((resolve, reject) => {
+      connection.query("SELECT * FROM checkout WHERE invoice = ?", invoice, (err, result) => {
+        if (!err) {
+          resolve(result);
+        } else {
+          reject(new Error(err));
+        }
+      });
+    });
   }
 };

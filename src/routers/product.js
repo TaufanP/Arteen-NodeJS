@@ -17,20 +17,20 @@ const productController = require('../controllers/product');
 
 router
     //Read
-    .get('/', /*auth.verify,*/ productController.getProduct)
+    .get('/', auth.verify, productController.getProduct)
     //Pagination
-    .get('/page', /*auth.verify,*/ productController.pageProduct)
+    .get('/page', auth.verify, productController.pageProduct)
     //Sort by name
-    .get('/sort/:susun', /*auth.verify,*/ productController.sortProduct)
+    .get('/sort/:susun', auth.verify, productController.sortProduct)
     //Read Detail
-    .get('/:id_product', /*auth.verify,*/ productController.productDetail)
+    .get('/:id_product', auth.verify, productController.productDetail)
     //Create
-    .post('/', /*auth.verify,*/ upload.single('image'), productController.insertProduct)
+    .post('/', auth.verify, upload.single('image'), productController.insertProduct)
     //Update
-    .patch('/:id_product', /*auth.verify,*/ upload.single('image'), productController.updateProduct)
+    .patch('/:id_product', auth.verify, upload.single('image'), productController.updateProduct)
     //Delete
-    .delete('/:id_product', /*auth.verify,*/ productController.deleteProduct)
+    .delete('/:id_product', auth.verify, productController.deleteProduct)
     //Search
-    .get('/search/:keyword', /*auth.verify,*/ productController.searchProduct)
+    .get('/search/:keyword', auth.verify, productController.searchProduct)
 
 module.exports = router;

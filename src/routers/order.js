@@ -5,14 +5,15 @@ const orderController = require('../controllers/order');
 
 router
     //Read
-    .get('/', /*auth.verify,*/ orderController.getOrder)
+    .get('/', auth.verify, orderController.getOrder)
     //Read Detail
-    .get('/:id_order', /*auth.verify,*/orderController.orderDetail)
+    .get('/:id_order', auth.verify,orderController.orderDetail)
+    .get('/invoice/:invoice', auth.verify,orderController.orderInvoice)
     //Create
-    .post('/', /*auth.verify,*/ orderController.insertOrder)
+    .post('/', auth.verify, orderController.insertOrder)
     //Update
-    .patch('/:id_order', /*auth.verify,*/ orderController.updateOrder)
+    .patch('/:id_order', auth.verify, orderController.updateOrder)
     //Delete
-    .delete('/:id_order', /*auth.verify,*/ orderController.deleteOrder)
+    .delete('/:id_order', auth.verify, orderController.deleteOrder)
 
 module.exports = router;
