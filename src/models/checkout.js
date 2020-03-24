@@ -15,7 +15,7 @@ module.exports = {
   },
   readCheckout: () => {
     return new Promise((resolve, reject) => {
-      connection.query("SELECT * FROM checkout", (err, result) => {
+      connection.query("SELECT * FROM checkout ORDER BY last_payment DESC", (err, result) => {
         if (!err) {
           resolve(result);
         } else {
