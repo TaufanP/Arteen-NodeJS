@@ -69,5 +69,6 @@ module.exports = {
             }
             else{res.json({"message": "Incorrect username!"})}
         })
+        .catch(err => res.json({"message": (err)}));
     }
 }
