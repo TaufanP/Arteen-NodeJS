@@ -60,7 +60,7 @@ module.exports = {
                     if(err){err=>console.log(err)}
                     else if(!isMatch){res.json({"message": "Incorrect password!"})}
                     else{
-                        const token = jwt.sign({useraja}, process.env.PRIVATE_KEY, {expiresIn: '24h'});
+                        const token = jwt.sign({useraja}, process.env.PRIVATE_KEY);
                         res.json({
                             token: token
                         });
