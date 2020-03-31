@@ -21,7 +21,7 @@ router
     //Pagination
     .get('/page', auth.verify, productController.pageProduct)
     //Sort by name
-    .get('/sort/:susun', auth.verify, productController.sortProduct)
+    .get('/sort/:category', auth.verify, productController.sortProduct)
     //Read Detail
     .get('/:id_product', auth.verify, productController.productDetail)
     //Create
