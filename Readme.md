@@ -1,6 +1,14 @@
-# Point of Sales
+<h1 align='center'>Arteen Backend</h1>
+<p align='center'>
+  <a href='https://nodejs.org/en/'>
+  <img height="200" src='https://miro.medium.com/max/1400/0*udqKV8dsTEnBeKRm.png' />
+  </a>
+</p>
 
-**Point of Sales** (POS) is an App that let user to buy foods or beverages. There are several features within the App at down below:
+<br>
+<br>
+
+**Arteen Backend** is the backend for Arteen Webiste which you can access at http://54.159.200.168:3000/. There are several features within the App:
 
   - CRUD Product
   - CRUD Category
@@ -9,6 +17,15 @@
   - Pagination
   - Allowed CORS
   - Able to test via Postman
+  
+## Introduction
+[![React.js](https://img.shields.io/badge/React-16.12.0-blue.svg?style=rounded-square)](https://facebook.github.io/react/)
+[![NodeJS](https://img.shields.io/badge/Node-v.1.0.0-green.svg?style=rounded-square)](https://nodejs.org/en/)
+[![Axios](https://img.shields.io/badge/Axios-v.0.19.2-66a1ff.svg?style=rounded-square)](https://github.com/axios/axios)
+
+## Related Project
+<a href="https://github.com/TaufanP/Arteen-ReactJS">Arteen ReactJS</a>
+<a href="https://github.com/TaufanP/Arteen-Redux">Arteen Redux</a>
 
 # Features Breakdown!
 This section will explain every each of the features. Including the description and the steps to test it.
