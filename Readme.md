@@ -24,8 +24,21 @@
 [![Axios](https://img.shields.io/badge/Axios-v.0.19.2-66a1ff.svg?style=rounded-square)](https://github.com/axios/axios)
 
 ## Related Project
-<a href="https://github.com/TaufanP/Arteen-ReactJS">Arteen ReactJS</a>
+<a href="https://github.com/TaufanP/Arteen-ReactJS">Arteen ReactJS</a></br>
 <a href="https://github.com/TaufanP/Arteen-Redux">Arteen Redux</a>
+
+## Requirements
+1. <a href="https://www.apachefriends.org/download.html">XAMPP</a>
+2. Arteen database <a href="https://drive.google.com/open?id=1QJRNwIPujen3HZNZKYrrbz3v3kbGyvNf">file</a>.
+3. <a href="https://github.com/TaufanP/Arteen-NodeJS">Arteen backend</a>
+4. node_modules
+
+## Installation
+1. Clone this repository.
+2. Open app's directory in CMD or Terminal.
+3. Type ` npm install ` to install all the required node_modules.
+4. Type ` npm start ` to start the server.
+5. Open <a href="https://www.postman.com/">Postman</a> to test the application.
 
 # Features Breakdown!
 This section will explain every each of the features. Including the description and the steps to test it.
