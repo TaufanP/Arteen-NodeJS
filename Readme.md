@@ -84,6 +84,7 @@ Show list of the created products. Test this feature via Postman with **GET** Me
 ```sh
 http://localhost:8081/api/v1/product
 ```
+![token-example](https://user-images.githubusercontent.com/33638021/79177532-408f9080-7e2d-11ea-9ab2-bc907df8959a.png)
 
 There is a hidden feature in Read Product which is you can show the detail of a product based on the *id*. Test this feature via Postman with **GET** Method with URL:
 
@@ -96,6 +97,7 @@ Replace the *:id* with the Product's id e.g
 ```sh
 http://localhost:8081/api/v1/product/1
 ```
+![product-detail](https://user-images.githubusercontent.com/33638021/79177705-b136ad00-7e2d-11ea-9bf1-d7772d4171dd.png)
 
 ### Update Product
 Update the data of a product based on the *id*. The data you need to provide are name, description, price, stock, id_category, and image. Test this feature via Postman with **PATCH** Method with URL:
@@ -105,6 +107,7 @@ http://localhost:8081/api/v1/product/:id
 ```
 
 Then fill the key and value at `Body -> form-data`
+![update-product](https://user-images.githubusercontent.com/33638021/79177778-cca1b800-7e2d-11ea-91cb-ffe709797068.png)
 
 ### Delete Product
 Remove a data from the list based on the *id*. Test this feature via Postman with **DELETE** Method with URL:
@@ -114,6 +117,7 @@ http://localhost:8081/api/v1/product/:id
 ```
 
 Replace the *:id* with the Product's id that you want to remove.
+![delete-product](https://user-images.githubusercontent.com/33638021/79177885-fce95680-7e2d-11ea-9bf7-02b976eb10b5.png)
 
 ### Search Product
 Search data by its name. You must provide the *keyword* of the name. Test this feature via Postman with **GET** Method with URL:
@@ -127,6 +131,7 @@ Replace the *:keyword* with the Product's name that you want to see, e.g
 ```sh
 http://localhost:8081/api/v1/product/search/ayam
 ```
+![search-product](https://user-images.githubusercontent.com/33638021/79177923-19858e80-7e2e-11ea-85df-69aeb08d042d.png)
 
 ### Pagination
 Navigating through pages. Test this feature via Postman with **GET** Method with URL:
