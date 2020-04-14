@@ -45,6 +45,25 @@ This section will explain every each of the features. Including the description 
 
 **General task**: After completing the requirement of a feature at Postman, click send button to see the result.
 
+Before you begin to test these features, you need to create an account first by accessing:
+```sh
+http://localhost:8080/api/v1/users/
+```
+Fill the required fields such as name, username, and password.
+Make sure POST method is selected before Send the request.
+![register](https://user-images.githubusercontent.com/33638021/79176840-80557880-7e2b-11ea-885a-aafee20faa34.png)
+
+Great! now you are already have an account. Let's sign in with it by accessing:
+```sh
+http://localhost:8080/api/v1/users/login
+```
+Fill the required fields such as username and password.
+Make sure POST method is selected before Send the request.
+![sign-in](https://user-images.githubusercontent.com/33638021/79177212-76804500-7e2c-11ea-9b48-fe87ef9dbeef.png)
+
+After you send the login request, you will get a token. Token used to access all of the features. You always need to put the token in x-access-token field at Headers. Here is an example for read data of all products with token inserted:
+![token-example](https://user-images.githubusercontent.com/33638021/79177532-408f9080-7e2d-11ea-9ab2-bc907df8959a.png)
+
 ## CRUD Product
 Contains Create, Read, Update, and Delete to Product database.
 
@@ -57,6 +76,7 @@ http://localhost:8081/api/v1/product
 
 Then fill the key and value at `Body -> form-data`
 Finalize it with Send button.
+![add-product](https://user-images.githubusercontent.com/33638021/79177600-6ae14e00-7e2d-11ea-9368-d7693822098c.png)
 
 ### Read Product
 Show list of the created products. Test this feature via Postman with **GET** Method with URL:
